@@ -82,6 +82,18 @@
     ```sh
     kops update cluster demo.k8s.valaxy.net --yes
     ```
+    output ends with:
+    ```sh
+    Cluster is starting.  It should be ready in a few minutes.
+    .
+    Suggestions:
+     * validate cluster: kops validate cluster
+     * list nodes: kubectl get nodes --show-labels
+     * ssh to the master: ssh -i ~/.ssh/id_rsa admin@api.learning.k8s.thehackadmin.com
+     * the admin user is specific to Debian. If not using Debian please use the appropriate user based on your OS.
+     * read about installing addons at: https://github.com/kubernetes/kops/blob/master/docs/operations/addons.md.
+    .
+    ```
 
 1. Validate your cluster
      ```sh
