@@ -56,19 +56,27 @@
 1. Create kubernetes cluster definitions on S3 bucket
    ```sh
    kops create cluster --cloud=aws --zones=ap-south-1b --name=demo.k8s.valaxy.net --dns-zone=valaxy.net --dns private 
+   .
+   kops create cluster --cloud=aws --zones=us-east-1e --name=learning.k8s.thehackadmin.com --dns-zone=thehackadmin.com --dns private
     ```
    output ends with:
     ```sh
-    Cluster configuration has been created.
-    .
-    Suggestions:
-     * list clusters with: kops get cluster
-     * edit this cluster with: kops edit cluster demo.k8s.thehackadmin.com
-     * edit your node instance group: kops edit ig --name=demo.k8s.thehackadmin.com nodes
-     * edit your master instance group: kops edit ig --name=demo.k8s.thehackadmin.com master-us-east-1a
-    .
-    Finally configure your cluster with: kops update cluster --name demo.k8s.thehackadmin.com --yes
-
+   Will modify resources:
+     DNSZone/thehackadmin.com
+           PrivateVPC               <nil> -> name:learning.k8s.thehackadmin.com
+   .
+   Must specify --yes to apply changes
+   .
+   Cluster configuration has been created.
+   .
+   Suggestions:
+    * list clusters with: kops get cluster
+    * edit this cluster with: kops edit cluster learning.k8s.thehackadmin.com
+    * edit your node instance group: kops edit ig --name=learning.k8s.thehackadmin.com nodes
+    * edit your master instance group: kops edit ig --name=learning.k8s.thehackadmin.com master-us-east-1e
+   .
+   Finally configure your cluster with: kops update cluster --name learning.k8s.thehackadmin.com --yes
+   .
     ```
 1. Create kubernetes cluser
     ```sh
