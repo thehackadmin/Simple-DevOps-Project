@@ -57,18 +57,17 @@
    ```sh
    kops create cluster --cloud=aws --zones=ap-south-1b --name=demo.k8s.valaxy.net --dns-zone=valaxy.net --dns private 
     ```
-output of 'kops create cluster...' ends with:
+   output ends with:
     ```sh
-    
-Cluster configuration has been created.
-
-Suggestions:
- * list clusters with: kops get cluster
- * edit this cluster with: kops edit cluster demo.k8s.thehackadmin.com
- * edit your node instance group: kops edit ig --name=demo.k8s.thehackadmin.com nodes
- * edit your master instance group: kops edit ig --name=demo.k8s.thehackadmin.com master-us-east-1a
-
-Finally configure your cluster with: kops update cluster --name demo.k8s.thehackadmin.com --yes
+    Cluster configuration has been created.
+    .
+    Suggestions:
+     * list clusters with: kops get cluster
+     * edit this cluster with: kops edit cluster demo.k8s.thehackadmin.com
+     * edit your node instance group: kops edit ig --name=demo.k8s.thehackadmin.com nodes
+     * edit your master instance group: kops edit ig --name=demo.k8s.thehackadmin.com master-us-east-1a
+    .
+    Finally configure your cluster with: kops update cluster --name demo.k8s.thehackadmin.com --yes
 
     ```
 1. Create kubernetes cluser
