@@ -1,0 +1,8 @@
+[docker]
+ec2-52-3-250-214.compute-1.amazonaws.com
+[jenkins]
+ec2-3-89-155-246.compute-1.amazonaws.com
+[ansible]
+localhost
+[k8s]
+34.234.204.34
